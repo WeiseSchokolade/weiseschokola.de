@@ -1,0 +1,175 @@
+@font-face {
+    font-family: muktaMalar;
+    font-weight: 800;
+    src: url(/assets/vrs/font/MuktaMalar-ExtraBold.woff);
+}
+
+@font-face {
+    font-family: muktaMalar;
+    font-weight: 500;
+    src: url(/assets/vrs/font/MuktaMalar-Regular.woff);
+}
+
+@font-face {
+    font-family: muktaMalar;
+    font-weight: bold;
+    src: url(/assets/vrs/font/MuktaMalar-Bold.woff);
+}
+
+
+
+:root {
+    font-family: muktaMalar, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    margin: 0px;
+}
+
+.title_bar {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: #4ab0be;
+}
+
+.logoImg {
+    margin: 15px;
+    height: 46px;
+    image-rendering: pixelated;
+}
+
+.logoLink {
+    display: flex;
+    align-items: center;
+    font-size: 46px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.previewContent {
+    width: 100vw;
+    height: 80vh;
+    position: relative;
+}
+
+.previewAssets {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.assetVideo {
+    object-fit: cover;
+}
+
+.previewAssets > * {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%)
+}
+
+.previewContentLabelContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.previewContentLabel {
+    width: 300px;
+    display: flex;
+    gap: 11px;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+
+    text-wrap-mode: nowrap;
+    
+    border-radius: 40px;
+    border: 1px solid rgba(114, 114, 114, 0.377);
+    padding: 15px 45px 15px 45px;
+    background-color: rgba(114, 114, 114, 0.123);
+    backdrop-filter: blur(10px);
+}
+
+.labelChangeContainer {
+    width: 150px;
+    height: 40px;
+    position: relative;
+    color: #4ab0be;
+}
+
+.labelChangeContainer > * {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+
+@media (width <= 550px) {
+    .title_bar {
+        height: 40px;
+    }
+
+    .logoImg {
+        margin: 8px;
+        height: 23px;
+    }
+    
+    .logoLink {
+        font-size: 23px;
+    }
+}
+
+@media (width <= 400px) {
+    .previewContentLabel {
+        width: 200px;
+        gap: 8px;
+        font-size: 20px;
+
+        border-radius: 20px;
+        padding: 10px 30px 10px 30px;
+    }
+
+    .labelChangeContainer {
+        width: 100px;
+        height: 20px;
+        position: relative;
+        color: #4ab0be;
+    }
+}
+
+
+.projectContent {
+    display: flex;
+}
+
+.profileContent {
+    width: 100%;
+    display: flex;
+}
+
+.profileCard {
+    position: relative;
+    width: 512px;
+    height: 512px;
+    background-image: url("/assets/vrs/socials_frame_nyrthos.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+}

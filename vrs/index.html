@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeiseSchokolade</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/assets/vrs/32x32_lowscale.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="title_bar">
+        <a class="logoLink" href=".">
+            <img class="logoImg" src="/assets/vrs/text.png">
+            Vanilla Ride Studios
+        </a>
+    </div>
+    <div class="previewContent">
+        <div class="previewAssets">
+            <video class="previewVideo" autoplay="autoplay" muted="muted">
+                <source src="/assets/vrs/background_video_preview.webm"/>
+            </video>
+        </div>
+        <div class="previewContentLabelContainer">
+            <div class="previewContentLabel">
+                <div>
+                    We create
+                </div>
+                <div id="labelChangeContainer" class="labelChangeContainer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="projectContent">
+        <div>
+            These are my projects
+        </div>
+    </div>
+    <div class="profileContent">
+        <div class="profileCard" style="background-image: url(/assets/vrs/socials_frame_schoko.png)">
+            Hi this is Schoko's profile
+        </div>
+        <div class="profileCard" style="background-image: url(/assets/vrs/socials_frame_nyrthos.png)">
+            Hi this is Nyrthos' profile
+        </div>
+    </div>
+</body>
+<script>
+    let labelChangeContainer = document.getElementById("labelChangeContainer")
+    const labels = ["experiences", "themeparks", "coasters", "flatrides", "models", "minigames", "mods"]
+    let labelIndex = 0;
+    function getNextLabel() {
+        let label = labels[labelIndex++];
+        labelIndex %= labels.length;
+        return label;
+    }
+    function appendLabel() {
+        let div = document.createElement("div");
+        div.textContent = getNextLabel();
+        labelChangeContainer.appendChild(div);
+        playAnimation(div);
+    }
+    function playAnimation(div) {
+        let animation = div.animate([
+            {transform: "translate(0px, -25px)", opacity: 0},
+            {transform: "translate(0px, 0px)", opacity: 1}
+        ], {
+            duration: 1000,
+            iterations: 1,
+            fill: "forwards",
+            easing: "ease-out"
+        });
+        animation.onfinish = () => {
+            setTimeout(() => {
+                div.animate([
+                    {transform: "translate(0px, 0px)", opacity: 1},
+                    {transform: "translate(0px, 25px)", opacity: 0}
+                ], {
+                    duration: 1000,
+                    iterations: 1,
+                    fill: "forwards",
+                    easing: "ease-out"
+                });
+                
+            }, 3000)
+        }
+        setTimeout(() => {
+            labelChangeContainer.removeChild(div);
+        }, 5000)
+    }
+    setInterval(appendLabel, 4250)
+    appendLabel()
+</script>
+</html>
