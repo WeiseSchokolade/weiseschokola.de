@@ -191,14 +191,19 @@ a {
     --scale-factor: 12;
 }
 
-@media (width <= calc(62px * 12 + 25px + 20px)) {.profileCardContainer {--scale-factor: 10;}}
-@media (width <= calc(62px * 10 + 25px + 20px)) {.profileCardContainer {--scale-factor: 8;}}
-@media (width <= calc(62px * 8 + 25px + 20px)) {.profileCardContainer {--scale-factor: 6;}}
-@media (width <= calc(62px * 6 + 25px + 20px)) {.profileCardContainer {--scale-factor: 4;}}
-@media (width <= calc(62px * 4 + 25px + 20px)) {.profileCardContainer {--scale-factor: 3;}}
-@media (width <= calc(62px * 3 + 25px + 20px)) {.profileCardContainer {--scale-factor: 2;}}
-@media (width <= calc(62px * 2 + 25px + 20px)) {.profileCardContainer {--scale-factor: 1.5;}}
-@media (width <= calc(62px * 1.5)) {.profileCardContainer {--scale-factor: 1;}}
+@media (width <= 790px) {.profileCardContainer {--scale-factor: 11;}}
+@media (width <= 710px) {.profileCardContainer {--scale-factor: 10;}}
+@media (width <= 650px) {.profileCardContainer {--scale-factor: 9;}}
+@media (width <= 580px) {.profileCardContainer {--scale-factor: 8;}}
+@media (width <= 510px) {.profileCardContainer {--scale-factor: 7;}}
+@media (width <= 440px) {.profileCardContainer {--scale-factor: 6.5;}}
+@media (width <= 410px) {.profileCardContainer {--scale-factor: 6;}}
+@media (width <= 380px) {.profileCardContainer {--scale-factor: 5.5;}}
+@media (width <= 350px) {.profileCardContainer {--scale-factor: 5;}}
+@media (width <= 310px) {.profileCardContainer {--scale-factor: 4.5;}}
+@media (width <= 285px) {.profileCardContainer {--scale-factor: 4;}}
+@media (width <= 255px) {.profileCardContainer {--scale-factor: 3.5;}}
+@media (width <= 200px) {.profileCardContainer {--scale-factor: 2;}}
 
 .profileCard {
     font-size: calc(1.45px * var(--scale-factor));
