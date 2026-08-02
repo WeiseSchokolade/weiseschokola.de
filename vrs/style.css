@@ -29,6 +29,10 @@ body {
     margin: 0px;
 }
 
+a {
+    color: #1175f8;
+}
+
 .title_bar {
     display: flex;
     align-items: center;
@@ -154,22 +158,120 @@ body {
     }
 }
 
-
 .projectContent {
     display: flex;
 }
 
 .profileContent {
     width: 100%;
+    background-color: #28595f;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+.profileContentHeader {
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
+    width: 100%;
+    text-align: center;
+    background-color: #17363a;
+}
+
+.profileCardContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    gap: 25px;
+    --scale-factor: 12;
+}
+
+@media (width <= calc(62px * 12 + 25px + 20px)) {.profileCardContainer {--scale-factor: 10;}}
+@media (width <= calc(62px * 10 + 25px + 20px)) {.profileCardContainer {--scale-factor: 8;}}
+@media (width <= calc(62px * 8 + 25px + 20px)) {.profileCardContainer {--scale-factor: 6;}}
+@media (width <= calc(62px * 6 + 25px + 20px)) {.profileCardContainer {--scale-factor: 4;}}
+@media (width <= calc(62px * 4 + 25px + 20px)) {.profileCardContainer {--scale-factor: 3;}}
+@media (width <= calc(62px * 3 + 25px + 20px)) {.profileCardContainer {--scale-factor: 2;}}
+@media (width <= calc(62px * 2 + 25px + 20px)) {.profileCardContainer {--scale-factor: 1.5;}}
+@media (width <= calc(62px * 1.5)) {.profileCardContainer {--scale-factor: 1;}}
+
 .profileCard {
+    font-size: calc(1.45px * var(--scale-factor));
     position: relative;
-    width: 512px;
-    height: 512px;
+    color: white;
+    width: calc(62px * var(--scale-factor));
+    height: calc(52px * var(--scale-factor));
     background-image: url("/assets/vrs/socials_frame_nyrthos.png");
     background-repeat: no-repeat;
     background-size: cover;
     image-rendering: pixelated;
+}
+
+.profileLabel {
+    position: absolute;
+}
+
+.introductionLabel {
+    top: calc(19.5px * var(--scale-factor));
+    left: calc(17.6px * var(--scale-factor));
+    width: calc(38px * var(--scale-factor));
+    font-size: calc(1.4px * var(--scale-factor));
+    line-height: calc(1.5px * var(--scale-factor));
+}
+
+.socialsLabel {
+    top: calc(28px * var(--scale-factor));
+    left: calc(17.6px * var(--scale-factor));
+    width: calc(38px * var(--scale-factor));
+    height: calc(13px * var(--scale-factor));
+    display: flex;
+    flex-direction: column;
+}
+
+.nyrthosSocialsLabel {
+    top: calc(30px * var(--scale-factor));
+}
+
+.socialsHeader {
+    font-size: calc(2.2px * var(--scale-factor));
+    margin-top: calc(0.3px * var(--scale-factor));
+    margin-bottom: calc(0.2px * var(--scale-factor));
+    line-height: calc(2.2px * var(--scale-factor));
+}
+
+.socialsLogo {
+    width: calc(1.75px * var(--scale-factor));
+    height: calc(1.75px * var(--scale-factor));
+    margin: calc(0.225px * var(--scale-factor));
+    image-rendering: auto;
+    object-fit: fill;
+}
+
+.socialsField {
+    display: flex;
+    gap: 5px;
+    height: calc(2.2px * var(--scale-factor));
+}
+
+.socialMediaSiteLabel {
+    width: calc(5px * var(--scale-factor));
+    padding-left: calc(0.1px * var(--scale-factor));
+    padding-right: calc(1px * var(--scale-factor));
+}
+
+.pronounsLabel {
+    top: calc(34.2px * var(--scale-factor));
+    left: calc(5.5px * var(--scale-factor));
+    width: calc(10px * var(--scale-factor));
+    font-size: calc(2px * var(--scale-factor));
+    text-align: center;
+}
+
+.nyrthosPronounLabel {
+    top: calc(30.25px * var(--scale-factor));
 }
