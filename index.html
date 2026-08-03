@@ -5,27 +5,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeiseSchokolade</title>
+
+    <style>
+        .hiddenUnlessDarkmode {
+            display: none;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: rgb(17, 6, 46);
+                color: white;
+            }
+
+            a {
+                color: rgb(25, 125, 255);
+            }
+
+            .hiddenUnlessDarkmode {
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
     <p>Welcome to WeiseSchokolade's website!</p>
-    <p>You might wanted to go to (All of it is in German)</p>
+    <p>As you can see, you've made it onto a website without any intricate styling. Congratulations!</p>
+    <p>Why is that? Well, I pretty much just don't care enough about a ✨ beautiful ✨ website to create one. I've got a lot of other projects going on, and a website without styling brings us all the way back to 1991.</p>
+    <p class="hiddenUnlessDarkmode">If you're seeing this, you'll notice that  I kind of lied. There actually is a bit of CSS, I just didn't want to flashbang people at night. You're welcome!</p>
+    <p>The stuff you're looking for doesn't actually need any css. Here it is:</p>
+    <h1>About me</h1>
+    <p>Hi. I'm <b>WeiseSchokolade</b>, a programmer/gamer/creator/computer science student from Germany.</p>
+    <p>I grew up with several different contact points to computers, technology and engineering in general.</p>
+    <p>I like tinkering with code and working on projects that help or entertain other people.</p>
+    <p>I'm a fan of maths, rocketry and engineering and greatly enjoy learning that sort of stuff.</p>
+    <p>However ☝️ I don't want to only focus on that. I've found great enjoyment in all kinds of sciences, politics, in the arts, literature, theater and music.</p>
+    <p>Ultimately, I want to make the world a better place - it's where I live, after all.</p>
+    <h1>My projects</h1>
+    <p>Admittedly, the stuff you find here is mostly programming related. There's a lot of stuff not listed here because I don't put everything I do on the internet - it should give you a rough overview though.</p>
     <ul>
-		<li><a href="./games/vocab">Practice basic french verbs!</a></li>
-        <li><a href="./notes">Practice your note reading skills</a></li>
-        <li><a href="./montecarlo">Visualisation of the Monte-Carlo Simulation to estimate π in German</a></li>
+        <li><a href="./vrs/">I'm the lead developer of Vanilla Ride Studios, a minecraft ride/map studio. Here's our website.</a></li>
+        <li><a href="https://smithed.net/summit">I also contributed the minecart train (functionality, not model) to Smithed Summit 2026</a></li>
+        <li><a href="https://modrinth.com/mod/vcoasters">A minecraft mod that allows you to create roller coasters and other vehicles in minecraft.</a></li>
+        <li><a href="https://github.com/WeiseSchokolade/RRSWJ">Been working on a java rendering framework/wrapper library for a long time. RRSWJ renders stuff with java.</a></li>
+        <li><a href="https://cv.weiseschokola.de/mc_status">A website that lists minecraft java programming-related repositories (and rates them best on recent activity).</a></li>
+        <li><a href="./vector/">A vector visualisation tool</a></li>
+		<li><a href="https://politikexperten.weiseschokola.de">A website (in German!) offering a Kahoot-esque quiz and leaderboards as well as self tests.</a></li>
+        <li><a href="https://github.com/WeiseSchokolade/ROAD">A racing game with multiplayer support.</a></li>
+        <li><a href="https://weiseschokolade.itch.io/not-gustavos-butter-chicken">Not Gustavo's Butter Chicken is a game I made for a game jam a while ago</a></li>
+        <li><a href="https://github.com/Gluo-Platform">I also contributed as a front-end dev to the upcoming social media platform Gluo</a></li>
+        <li><a href="https://scratch.mit.edu/users/WeiseSchokolade/">I've got a </a></li>
     </ul>
-    <p>or to (All of this is in English)</p>
+    <p>Maybe you've heard of <a href="https://en.wikipedia.org/wiki/Sturgeon's_law">Sturgeon's law</a>: "Ninety percent of everything is crap" (Theodore Sturgeon)</p>
+    <p>I wanted to include these projects for the sake of completeness, though they were made when I had fewer experience. I'm quite fond of them, so don't be too harsh while judging them.</p>
     <ul>
-		<li><a href="https://cv.weiseschokola.de/mc_status">An up-to-date list of projects that aid in datapack development</a></li>
         <li><a href="./lookingforalaska/">Test your knowledge about the book Looking for Alaska by John Green</a></li>
-        <li><a href="./vector/">Play around with vectors</a></li>
+        <li><a href="https://scratch.mit.edu/users/WeiseSchokolade/">There's a bunch of projects of mine on Scratch</a></li>
     </ul>
-    <p>If you want to see more of the stuff I do, you can also follow me on <a href="https://gluo.xyz">gluo</a>!</p>
-    <p>If you want to support me on there while signing up, use <a href="https://www.gluo.xyz/signup?ref=7197992274406412288">this link</a> instead.</p>
-    <p>If you want to let me know that the design of this page sucks, thank you for the feedback.</p>
-    </p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>Maybe just go to <a href="https://github.com/WeiseSchokolade/WeiseSchokolade.github.io">this page</a></p>
+    <p>If you read the About me section, you might recall that I'm from Germany. Here are thus some untranslated projects in German I've worked on.</p>
+    <p>I felt funny and translated the links back to German - just click on a random one and try your best!</p>
+    <ul>
+		<li><a href="./games/vocab">Hier kannst du grundlegende französische Verben üben</a></li>
+        <li><a href="./notes">Verbessere deine Notenschriftlesefähigkeiten</a></li>
+        <li><a href="./notes2">Verbessere deine Notenschriftlesefähigkeiten 2: Jetzt einfach besser</a></li>
+        <li><a href="./montecarlo">Visualisierung der Monte-Carlo Methode zur Annäherung von π/4 (mal vier also π)</a></li>
+        <li><a href="./werewolf">Eine Liste an Soundeffekten für das Spiel Werwolf.</a></li>
+        <li><a href="./schule/biologie/">Informationen über den Vermehrungszyklus von Zellen.</a></li>
+        <li><a href="./orientierungsquiz/">Ein Quiz, welches bei der Präferenzwahl einer Partei hilft.</a></li>
+        <li><a href="https://weiseschokolade.github.io/Globalization/">Eine Webseite, die über die Globalisierung informiert.</a></li>
+        <li><a href="https://weiseschokolade.github.io/nandu_extended/">Eine Lösung der Aufgabe "NANDU" für den 42. Bundeswettbewerb Informatik.</a></li>
+    </ul>
+    <p>The source code for this website is available <a href="https://github.com/WeiseSchokolade/weiseschokola.de">right here</a></p>
+    <h1>Contact</h1>
+    <p>There's a lot of projects I might publish one day. I do hope I don't forget to update this site. To make sure you don't miss anything, feel free to check out my socials:</p>
+    <ul>
+        <li>Github: <a href="https://github.com/WeiseSchokolade">https://github.com/WeiseSchokolade</a></li>
+        <li>YouTube: <a href="https://www.youtube.com/@WeiseChocolate">https://www.youtube.com/@WeiseChocolate</a></li>
+        <li>Bluesky: <a href="https://bsky.app/profile/weiseschokolade.bsky.social">https://bsky.app/profile/weiseschokolade.bsky.social</a></li>
+        <li>Discord: @WeiseSchokolade</li>
+    </ul>
+    <p>See you again someday!</p>
+    <br><br><br>
+    <p>(C) 2026 WeiseSchokolade (or something)</p>
 </body>
 </html>
