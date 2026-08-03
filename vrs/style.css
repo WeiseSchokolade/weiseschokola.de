@@ -158,8 +158,113 @@ a {
     }
 }
 
+.portfolioContent {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolioList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.projectEntry {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    justify-content: space-around;
+}
+
 .projectContent {
     display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 15px;
+}
+
+.projectTitle {
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+.projectDescriptionYear {
+    font-size: calc(36px);
+    line-height: 30px;
+}
+
+.projectTimeframe {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.projectImg {
+    width: calc(2/3 * 100%);
+    object-fit: cover;
+}
+
+.projectLinkLogo {
+    width: 30px;
+    height: 30px;
+    margin-top: 2px;
+}
+
+.projectLogoLinkContainer {
+    display: flex;
+    gap: 5px;
+}
+
+.leftProjectEntry .projectImg {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin-right: auto;
+}
+
+.rightProjectEntry .projectImg {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    margin-left: auto;
+}
+
+@media (width < 900px) {
+    .projectEntry {
+        flex-direction: column;
+    }
+    
+    .rightProjectEntry {
+        flex-flow: column-reverse;
+    }
+
+    .projectImg {
+        width: 100%;
+    }
+
+    .leftProjectEntry .projectImg {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .rightProjectEntry .projectImg {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+}
+
+.projectDescriptor {
+    border-radius: 25px;
+    color: black;
+    background-color: rgb(163, 163, 163);
+    border: 1.5px solid rgb(226, 226, 226);
+    padding: 10px 15px 10px 15px;
+    margin-right: 10px;
+    font-size: 20px;
 }
 
 .profileContent {
@@ -171,7 +276,7 @@ a {
     justify-content: center;
 }
 
-.profileContentHeader {
+.contentHeader {
     font-size: 40px;
     font-weight: 800;
     color: white;
@@ -189,6 +294,11 @@ a {
     padding-bottom: 25px;
     gap: 25px;
     --scale-factor: 12;
+}
+
+.socialsList {
+    display: flex;
+    flex-direction: column;
 }
 
 @media (width <= 790px) {.profileCardContainer {--scale-factor: 11;}}
@@ -279,4 +389,27 @@ a {
 
 .nyrthosPronounLabel {
     top: calc(30.25px * var(--scale-factor));
+}
+
+.footer {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #28595f;
+    background-color: #17363a;
+}
+
+.copyrightNoticeLogo {
+    font-weight: 800;
+}
+
+.copyrightNotice {
+    font-size: 17px;
+}
+
+.copyrightNoticeYear {
+    font-size: 20px;
 }
